@@ -1,20 +1,22 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import { useState, useEffect } from 'react'
 export default function Home() {
 
   const [directory, setDirectory] = useState('~')
-  const [command, setCommand] = useState('')
-  const [focus, setFocus] = useState(0)
+  const [command, setCommand] = useState(undefined)
+  const [previousOutput, setPreviousOutput] = useState(`
+  Welcome to my terminal! </br>
+  hint: type the command 'help'
 
-
-  const [previousOutput, setPreviousOutput] = useState('Examples: <br/> ls - List all options <br/> clear - clear screen')
+  `)
  
   useEffect(()=>{
+    
+
     if (typeof window !== "undefined") {      
       document.getElementById('command').focus()
-      console.log("Focusing on stuff")
+     
+
+     
 
     }
 
@@ -41,6 +43,21 @@ export default function Home() {
       case 'clear': ourOutput = 'CLEAR'
 
       break;
+
+      case 'help' : ourOutput = `Commands: <br/> 
+      about - About Me <br/> 
+      ls - List folders <br/> 
+      clear - Clear screen <br />
+      cd - Change Directory`
+      break ;
+
+      case 'about' : ourOutput = `About Me: <br/> 
+      💻 - Full Stack Developer <br/> 
+      🧑‍🎓 - Senior studying Cybersecurity <br />
+      📚 - Learning about computer architecture<br />
+      💾 - Collecting Vintage Computers<br/>
+      📍 - Living in NYC`
+      break ;
       
       
       case 'cd': {
@@ -134,7 +151,7 @@ export default function Home() {
           <div className='cursor'>
             <form onSubmit={onCommandSubmit} id='ourForm'>
 
-            <input autoComplete='off' id='command' value={command} className='bg-black font-bold' type='text' style={{outline: 'none', width: '100%'}} onChange={(e)=>{setCommand(e.target.value.toLowerCase())}} onBlur={handleBlur}/>
+            <input autoComplete='off' id='command' value={command} className='bg-black font-bold select-all' type='text' style={{outline: 'none', width: '100%'}} onChange={(e)=>{setCommand(e.target.value.toLowerCase())}} onBlur={handleBlur}/>
             </form>
 
           </div>
@@ -142,7 +159,7 @@ export default function Home() {
   
       <br/>
       
-  
+    <button style={{bottom : 0, position :'absolute'}} onClick={()=>document.getElementById('command').focus()}> 	→ Click on me to type commands 	← </button>
     </div>
   )
 }
