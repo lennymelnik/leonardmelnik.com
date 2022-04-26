@@ -89,11 +89,11 @@ export default function Home() {
       setPreviousOutput('')
     }else if(command.trim().split(' ')[0] == 'cd'){
       if(previousOutput != ''){
-        setPreviousOutput(previousOutput + `<a class='text-green-300'>leonard@pm.me</a>:
+        setPreviousOutput(previousOutput + `<br /> <a class='text-green-300'>leonard@pm.me</a>:
         <a class='text-blue-400'>`+directory+`</a>
         $ `+ command)
       }else{
-        setPreviousOutput(previousOutput + `<br /> <a class='text-green-300'>leonard@pm.me</a>:
+        setPreviousOutput(previousOutput + `<a class='text-green-300'>leonard@pm.me</a>:
         <a class='text-blue-400'>`+directory+`</a>
         $ `+ command)
       }
