@@ -118,7 +118,7 @@ export default function Home() {
     <div className="bg-black text-white font-mono font-bold" style={{height:"100vh"}}>
       <p dangerouslySetInnerHTML={{__html :previousOutput}}></p>
 
-      <div class="flex justify-start">
+      <div className="flex justify-start">
 
         <a className='text-green-300'>leonard@pm.me</a>: 
         <a className='text-blue-400'>{directory} </a>
