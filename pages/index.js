@@ -183,9 +183,9 @@ export default function Home() {
     
     
     setCommand('')
-    setTimeout(function() { 
+    /*setTimeout(function() { 
       window.scrollTo(0, document.body.scrollHeight)
-    }, 100);
+    }, 100);*/
 
   }
   return (
