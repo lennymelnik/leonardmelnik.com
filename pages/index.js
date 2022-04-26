@@ -88,9 +88,17 @@ export default function Home() {
     if(command == 'clear'){
       setPreviousOutput('')
     }else if(command.trim().split(' ')[0] == 'cd'){
-      setPreviousOutput(previousOutput + `<br /> <a class='text-green-300'>leonard@pm.me</a>:
-      <a class='text-blue-400'>`+directory+`</a>
-      $ `+ command)
+      if(previousOutput != ''){
+        setPreviousOutput(previousOutput + `<a class='text-green-300'>leonard@pm.me</a>:
+        <a class='text-blue-400'>`+directory+`</a>
+        $ `+ command)
+      }else{
+        setPreviousOutput(previousOutput + `<br /> <a class='text-green-300'>leonard@pm.me</a>:
+        <a class='text-blue-400'>`+directory+`</a>
+        $ `+ command)
+      }
+
+      
     }
     else{
       if(previousOutput != ''){
@@ -126,7 +134,7 @@ export default function Home() {
           <div className='cursor'>
             <form onSubmit={onCommandSubmit} id='ourForm'>
 
-            <input id='command' value={command} className='bg-black font-bold' type='text' style={{outline: 'none', width: '100%'}} onChange={(e)=>{setCommand(e.target.value.toLowerCase())}} onBlur={handleBlur}/>
+            <input autocomplete='off' id='command' value={command} className='bg-black font-bold' type='text' style={{outline: 'none', width: '100%'}} onChange={(e)=>{setCommand(e.target.value.toLowerCase())}} onBlur={handleBlur}/>
             </form>
 
           </div>
