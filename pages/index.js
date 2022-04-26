@@ -4,7 +4,7 @@ export default function Home() {
   var commandOptions = {
     'help' : `
 
-    Next.js web shell interface, version 0.1 - by Leonard Melnik <br/>
+    Next.js web shell resume, version 0.1 - by Leonard Melnik <br/>
     
     <a class='text-blue-500'> Commands: </a><br/> 
     <div class='px-4'>
@@ -13,8 +13,8 @@ export default function Home() {
       contact - Ways to reach out to me <br/>
       projects - What I am currently working on!<br/>
       ls - List folders <br/> 
-      clear - Clear screen <br />
-      cd - Change Directory
+      cd - Change Directory<br />
+      clear - Clear screen
       
       </div>`,
 
@@ -37,9 +37,12 @@ export default function Home() {
     <a class='text-red-400'> Sos </a>- An bare bones operating system that I am building from scratch </br>`,
 
     work : `
-    Evaluable -  <br/>
-    <a class='text-green-400'>43605</a> - <br/>
-    <a class='text-blue-700'>Unime</a> - <br/>
+    Evaluable - Survey and data company specializing in multivariate surveys. Currently
+    working B2B with Latin American Corporations.<br/>
+    <a class='text-green-400'>43605</a> - Cyber Security company utilizing darknet web scraping and social-engineering
+    tests to provide early actionable intelligence. <br/>
+    <a class='text-blue-700'>Unime</a> - Survey and data company specializing in multivariate surveys. Currently
+    working B2B with Latin American Corporations.<br/>
     `,
 
     skills : `
@@ -157,11 +160,11 @@ export default function Home() {
       setPreviousOutput('')
     }else if(command.trim().split(' ')[0] == 'cd'){
       if(previousOutput != ''){
-        setPreviousOutput(previousOutput + `<br /> <a class='text-green-300'>leonard@pm.me</a>:
+        setPreviousOutput(previousOutput + `<br /> <a class='text-green-300'>leonardmelnik@pm.me</a>:
         <a class='text-blue-400'>`+directory+`</a>
         $ `+ command)
       }else{
-        setPreviousOutput(previousOutput + `<a class='text-green-300'>leonard@pm.me</a>:
+        setPreviousOutput(previousOutput + `<a class='text-green-300'>leonardmelnik@pm.me</a>:
         <a class='text-blue-400'>`+directory+`</a>
         $ `+ command)
       }
@@ -170,11 +173,11 @@ export default function Home() {
     }
     else{
       if(previousOutput != ''){
-        setPreviousOutput(previousOutput + `<br /> <a class='text-green-300'>leonard@pm.me</a>:
+        setPreviousOutput(previousOutput + `<br /> <a class='text-green-300'>leonardmelnik@pm.me</a>:
       <a class='text-blue-400'>`+directory+`</a>
       $ `+command + '<br/>' +ourOutput)
       }else{
-        setPreviousOutput(previousOutput + `<a class='text-green-300'>leonard@pm.me</a>:
+        setPreviousOutput(previousOutput + `<a class='text-green-300'>leonardmelnik@pm.me</a>:
       <a class='text-blue-400'>`+directory+`</a>
       $ `+command + '<br/>' +ourOutput)
       }
