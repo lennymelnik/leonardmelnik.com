@@ -134,7 +134,7 @@ export default function Home() {
           <div className='cursor'>
             <form onSubmit={onCommandSubmit} id='ourForm'>
 
-            <input autocomplete='off' id='command' value={command} className='bg-black font-bold' type='text' style={{outline: 'none', width: '100%'}} onChange={(e)=>{setCommand(e.target.value.toLowerCase())}} onBlur={handleBlur}/>
+            <input autoComplete='off' id='command' value={command} className='bg-black font-bold' type='text' style={{outline: 'none', width: '100%'}} onChange={(e)=>{setCommand(e.target.value.toLowerCase())}} onBlur={handleBlur}/>
             </form>
 
           </div>
