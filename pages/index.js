@@ -8,7 +8,7 @@ export default function Home() {
     
     <a class='text-blue-500'> Commands: </a><br/> 
     <div class='px-4'>
-
+      work - My main endevors <br/>
       about - About Me <br/> 
       contact - Ways to reach out to me <br/>
       projects - What I am currently working on!<br/>
@@ -75,6 +75,7 @@ export default function Home() {
   const [command, setCommand] = useState(undefined)
   const [previousOutput, setPreviousOutput] = useState(`
   Welcome to my terminal! </br>
+  This in in development, features and more information will be added! <br/>
   hint: type the command 'help'
 
   `)
@@ -196,7 +197,7 @@ export default function Home() {
 
       <div className="flex justify-start">
 
-        <a className='text-green-300'>leonard@pm.me</a>: 
+        <a className='text-green-300' href='mailto:leonardmelnik@pm.me'>leonardmelnik@pm.me</a>: 
         <a className='text-blue-400'>{directory} </a>
         <a>$ </a>
           <div className='cursor'>
