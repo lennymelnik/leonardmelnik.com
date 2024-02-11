@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Projects from "@/components/Projects";
 import Hero from "@/components/Hero";
 import Certifications from "@/components/Certifications";
+import ArticlesPage from "@/components/Articles";
 export default function Home() {
   return (
     
@@ -27,6 +28,7 @@ export default function Home() {
             <Certifications />
             <section id="articles" className="my-8">
               {/* Articles section content */}
+              <ArticlesPage />
             </section>
             <section id="videos" className="my-8">
               {/* Videos section content */}
