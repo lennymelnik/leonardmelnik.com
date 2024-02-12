@@ -7,7 +7,7 @@ const Hero = () => {
                     <div className="container mx-auto flex px-5 py-12 items-end space-x-8">
                         <img className="lg:w-2/6 md:w-1/4 w-2/5 object-cover object-center rounded" src="/me.png" alt="Your Photo" />
                         <div className="lg:w-2/3 w-full h-fit flex flex-col justify-end">
-                            <h1 className="title-font sm:text-5xl text-3xl mb-4 font-medium text-gray-900">Hi, I'm Leonard</h1>
+                            <h1 className="title-font sm:text-5xl text-3xl mb-4 font-medium text-gray-900">Hi, I am Leonard</h1>
                             <p className="leading-relaxed">leonardmelnik@pm.me</p>
                             <p className="leading-relaxed">Cybersecurity enthusiast and software developer...</p>
                         </div>
