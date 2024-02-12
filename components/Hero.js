@@ -11,7 +11,7 @@ const Hero = () => {
                             <p className="leading-relaxed">leonardmelnik@pm.me</p>
                             <p className="leading-relaxed">Cybersecurity enthusiast and software developer...</p>
                         </div>
-                        <div className="flex items-center">
+                        <div className="hidden sm:block flex items-center">
                             {/* Navigation Links */}
                             <a href="#projects" className="text-gray-800 hover:text-gray-600 mx-4 sm:mx-6">
                                 <p>Projects</p>

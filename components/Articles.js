@@ -44,7 +44,7 @@ export default function ArticlesPage() {
                    Some articles or posts I have written about my work as well as hobbies.
                 </p>
             </div>
-            <div className='grid grid-cols-2'>
+            <div className='grid grid-cols-1 sm:grid-cols-2'>
                 {articlesData.map((article, index) => (
                     <Article key={index} article={article} />
                 ))}
